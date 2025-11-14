@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cálculo de áreas y volúmenes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="wrapper">
+
+    <section class="controls">
+      <label for="figura">Figura:</label>
+      <select id="figura">
+        <option value="cuadrado">Cuadrado</option>
+        <option value="rectangulo">Rectángulo</option>
+        <option value="circulo">Círculo</option>
+        <option value="cubo">Cubo</option>
+        <option value="paralelepipedo">Paralelepípedo</option>
+        <option value="esfera">Esfera</option>
+        <option value="cilindro">Cilindro</option>
+        <select id="figura">
+</select>
+
+      </select>
+
+      <div id="inputs"></div>
+
+      <div class="btn-group">
+        <button onclick="calcular()">Calcular</button>
+        <button onclick="limpiar()">Limpiar</button>
+      </div>
+
+      <div id="error" class="error-msg"></div>
+    </section>
+
+    <section class="canvas-container">
+      <canvas id="canvas" width="1300" height="700"></canvas>
+      <div class="results" id="result"></div>
+    </section>
+
+  </main>
+
+  <div class="firma-fija">
+    <img src="./gatitos.jpg" alt="Mi foto" class="firma-foto">
+    <div class="firma-nombre">Andres G. Pimiento</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

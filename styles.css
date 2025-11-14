@@ -1,0 +1,212 @@
+/* ===== Estilo global ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: linear-gradient(120deg, #dbeafe 0%, #f9fafb 90%);
+  color: #1f2937;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* ===== Panel de controles ===== */
+.controls {
+  background: #ffffff;
+  padding: 28px 32px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+  display: inline-block;
+  min-width: 380px;
+  transition: transform .2s ease;
+}
+.controls:hover {
+  transform: translateY(-2px);
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+select, input {
+  padding: 9px 12px;
+  margin-right: 12px;
+  font-size: 1rem;
+  border-radius: 7px;
+  border: 1px solid #cbd5e1;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+select:focus,
+input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.25);
+}
+
+.btn-group {
+  margin-top: 12px;
+}
+
+/* Botones */
+button {
+  background: linear-gradient(90deg, #0ea5e9 50%, #6366f1 100%);
+  color: white;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: transform .15s ease, background .25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #2563eb 40%, #4338ca 100%);
+}
+
+/* Mensaje de error */
+.error-msg {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #dc2626;
+}
+
+/* ===== Canvas ===== */
+.canvas-container {
+  background: #ffffff;
+  padding: 34px 28px;
+  border-radius: 20px;
+  box-shadow: 0 5px 18px rgba(59,130,246,0.17);
+  position: relative;
+  transition: transform .2s ease;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto 20px auto;
+  border: 3px solid #3b82f6;
+  background: #eef2ff;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(99,102,241,0.15);
+}
+
+/* Resultados */
+.results {
+  background: #dbeafe;
+  max-width: 360px;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 0 3px 8px rgba(59,130,246,0.25);
+}
+
+/* ===== Firma fija ===== */
+.firma-fija {
+  position: fixed;
+  bottom: 22px;
+  right: 34px;
+  background: rgba(255,255,255,0.96);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+  padding: 10px 16px 10px 10px;
+  backdrop-filter: blur(4px);
+}
+
+.firma-foto {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  border: 2px solid #0ea5e9;
+}
+
+.firma-nombre {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e40af;
+  letter-spacing: .5px;
+}
+
+
+/* Canvas responsivo */
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inputs en grid */
+#inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Inputs con estilo moderno */
+.input-figura {
+  width: 100%;
+}
+
+/* Botones responsivos */
+.btn-group button {
+  margin-top: 10px;
+  width: 140px;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    width: 100%;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn-group button {
+    width: 100%;
+  }
+}
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 400px) {
+  body {
+    padding: 20px;
+  }
+
+  .controls {
+    padding: 20px;
+  }
+
+  .firma-fija {
+    flex-direction: column;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px;
+  }
+
+  .firma-foto {
+    width: 48px;
+    height: 48px;
+    margin-right: 0;
+    margin-bottom: 6px;
+  }
+
+  .firma-nombre {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
